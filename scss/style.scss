@@ -1,0 +1,38 @@
+//Підключення шрифтів
+@import "_fonts";
+//Файл обнулення
+@import "_reset";
+//Файл зі змінними
+@import "_vars";
+//Міксіни
+@import "_mixin";
+//aside стилі
+@import "_aside";
+// content стилі
+@import "_content";
+
+body {
+  color: #292d32;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.14px;
+  line-height: 1.2;
+  background-color: $contentBg;
+
+  overflow-x: hidden;
+}
+.wrapper {
+  min-height: 100%;
+}
+
+[class*="__container"] {
+  max-width: 1470px;
+  padding: 0 15px;
+  margin: 0 auto;
+  display: flex;
+  @include max-screen(575px) {
+    padding: 0 5px;
+  }
+}
